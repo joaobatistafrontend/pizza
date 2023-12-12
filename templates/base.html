@@ -1,0 +1,75 @@
+{% load static%}
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PIZZARIA DELÍCIAS</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sua-chave-de-integridade">
+  </head>
+<body>
+    
+     <!-- Header -->
+     <header>
+          <div class="header-content">
+          <nav>
+               <p class="brand-logo"><strong>PIZZARIA DELÍCIAS</strong></p>
+               <ul>
+               
+               <li><a href="#menu">Cardápio</a></li>
+               <button>Login</button>
+
+          <!--CARRINHO-->
+               <a href="#" class="cart-button">
+               <i class="fas fa-shopping-cart fa-lg"></i>
+          </a>
+
+               </ul>
+          </nav>
+          <div class="header-block">
+               <div class="header-text">
+               <h2>SEJA BEM-VINDO</h2>
+               <p>
+               Nós vendemos pizzas e esfirras.
+               </p>
+               </div>
+               <img src="{% static 'img/logo_bonna.jpg' %}" alt="Logo da Pizzaria" />
+          </div>
+          </div>
+     </header>
+     
+     <!-- Menu Section -->
+     <section class="menu" id="menu">
+          <div class="menu-content">
+          <div class="menu-title-wrapper">
+               <p>Confira nossas opções!</p>
+          <h3>Cardápio</h3>
+
+               {% for tipo in tipos_produto %}
+               
+                    <button onclick="location.href='{% url 'lista_produtos' tipo.pk %}'" style="background-color: green; margin: 15px; padding: 15px;"> {{ tipo.novo_produto }}</button>
+               {% endfor %}
+
+
+    <!-- </div>
+        <div class="menu-filter">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="O que deseja?"
+          />
+          <button class="search-button">Buscar</button>
+        </div>
+     -->
+        
+        {%block content%} 
+        
+        {%endblock%}
+
+
+
+</body>
+</html>
