@@ -5,7 +5,7 @@ from .models import *
 
 
 class Index(TemplateView):
-    template_name = 'inde.html'
+    template_name = 'index.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -36,3 +36,7 @@ class Lista(ListView):
     def get_queryset(self):
         tipo_pk = self.kwargs['pk']
         return Produto.objects.filter(tipo__pk=tipo_pk)
+
+
+class Carrinho(TemplateView):
+  template_name = 'carrinho.html'
