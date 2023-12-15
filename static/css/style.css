@@ -71,6 +71,8 @@ nav {
   transition: 0.2s;
 }
 
+
+
 .cart-icon {
   width: 20px;
   height: 20px;
@@ -156,7 +158,7 @@ nav ul button:hover {
 
 .header-text {
   max-width: 280px;
-  color: #EA9E3B;
+  color: #000000;
 }
 
 .header-text h2 {
@@ -168,7 +170,7 @@ nav ul button:hover {
 
 .header-text p {
   max-width: 280px;
-  color: #EA9E3B;
+  color: #000000;
   margin-left: 20px;
   transform: translateX(-20px);
   transition: transform 0.4s;

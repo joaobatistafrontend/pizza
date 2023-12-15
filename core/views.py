@@ -5,7 +5,7 @@ from .models import *
 
 
 class Index(TemplateView):
-    template_name = 'index.html'
+    template_name = 'inde.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
